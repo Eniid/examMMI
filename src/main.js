@@ -22,10 +22,10 @@ const animation = {
         this.canvasElt.width = 640; 
 
         this.ctx = this.canvasElt.getContext('2d'); 
+        document.body.insertAdjacentElement("beforeend", this.canvasElt);
         boutton.addEventListener('click', () => {
             console.log("coucou");
             
-            document.body.insertAdjacentElement("beforeend", this.canvasElt);
         })
 
         // Inisitaliser les classes
