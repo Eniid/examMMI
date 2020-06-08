@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Pong</title>
+    <style>
+        .js h1, .js p {
+            display: none;
+        }
+
+        .js {
+            background-color: black;
+        }
+
+        section {
+            color: white;
+            font-family: Inter, sans-serif;
+        }
+
+        .no-js section {
+            display: none;
+        }
+
+        canvas{
+            margin: auto;
+            display: block;
+            margin-top: 20%;
+            box-shadow: 0 0 1em 1em rgba(255,255,255,0.5);
+        }
+    </style>
+</head>
+<body class="no-js">
+<h1>Pong</h1>
+<p>Ce jeu nécessite que votre navigateur exécute Javascript. Ce ne semble pas être le cas. Contactez quelqu’un qui peut
+    vous aider à résoudre ce problème.</p>
+<section id="step-1">
+    <h2>A quel point ça doit être dur ? (L et P pour jouer)</h2>
+    <form action="#">
+        <div>
+            <label for="difficulty">Choisis ton niveau</label>
+            <select name="difficulty" id="difficulty">
+                <option value="5">Facile mais ennuyeux</option>
+                <option value="10">Dur mais challengeant</option>
+                <option value="20">Trop dur et quasi injouable</option>
+            </select>
+        </div>
+        <button id="to-step-2">Valider</button>
+    </form>
+</section>
+<script src="dist/main.js"></script>
+</body>
+</html>
