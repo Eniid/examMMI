@@ -13,6 +13,7 @@ export default class Pallet {
         this.height = 100;
         this.speed = 3; 
         this.point = 0; 
+        this.locationPoint = this.canvas.widht -10; 
 
         const x = 20; 
         const y = (this.canvas.height/2)-(this.height/2); 
@@ -26,6 +27,10 @@ export default class Pallet {
         this.ctx.fillStyle = this.color
         this.ctx.fillRect(this.location.x, this.location.y, this.widht, this.height);
         this.ctx.fill();
+
+        this.ctx.font = '48px serif';
+        this.ctx.textAlign = "center"; 
+        this.ctx.fillText(this.point, this.canvas.widht -10, this.canvas.height -20)
     }; 
 
 

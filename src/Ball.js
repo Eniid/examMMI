@@ -15,7 +15,7 @@ export default class Ball {
         //this.acceleration = 0.2;
         this.speed = 4;
         this.angle = Math.random() * 70 - 30; 
-        this.angle =  340; 
+
 
         const x = this.canvas.width/2 - this.widht/2; 
         const y = (this.canvas.height/2)-(this.height/2); 
@@ -58,11 +58,23 @@ export default class Ball {
         }
         if(this.location.x > this.canvas.width ){
             //console.log("partit");
-            if(this.location.y > this.canvas.height/2){
-                console.log("test");
-                
+            if(this.location.y > this.canvas.height/3 && this.location.y < this.canvas.height/3 + this.canvas.height/3){
+                this.location.x = this.canvas.width/2 - this.widht/2; 
+                this.location.y = (this.canvas.height/2)-(this.height/2);
+                // AJouter un point à l'équipe adversse
+            } else {
+                this.angle = this.angle - 90; 
             }
-            
+        }
+        if(this.location.x < 0 ){
+            //console.log("partit");
+            if(this.location.y > this.canvas.height/3 && this.location.y < this.canvas.height/3 + this.canvas.height/3){
+                this.location.x = this.canvas.width/2 - this.widht/2; 
+                this.location.y = (this.canvas.height/2)-(this.height/2);
+                // AJouter un point à l'équipe adversse
+            } else {
+                this.angle = this.angle - 90; 
+            }
         }
     }
 
