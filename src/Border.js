@@ -15,19 +15,22 @@ export default class Border {
     }
 
     draw(){
+   
         this.ctx.beginPath(); 
-        this.ctx.strokeStyle = this.color
-        this.ctx.moveTo(this.b, this.a);
-        this.ctx.lineTo(this.a, this.a);
-        this.ctx.lineTo(this.c, this.a);
-        this.ctx.lineTo(this.c, this.b);
-        this.ctx.stroke; 
+        this.ctx.strokeStyle = "#fff"
+        this.ctx.moveTo(this.a, this.b);
+        this.ctx.lineTo(this.b, this.b);
+        this.ctx.lineTo(this.b, this.c);
+        this.ctx.lineTo(a, c);
+        this.ctx.stroke(); 
 
     }
 
 
     update(){
         this.draw(); 
+        
+        
     }
 
 }

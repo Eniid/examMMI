@@ -33,12 +33,14 @@ export default class Pallet {
 
     update(){
         if(this.controller.isKeyDown("p")){
-            this.location.y = this.location.y - this.speed
+            if(this.location.y > 0) this.location.y = this.location.y - this.speed
             
         }
         if(this.controller.isKeyDown("l")){
-            this.location.y = this.location.y + this.speed
+            if(this.location.y < this.canvas.height - this.height) this.location.y = this.location.y + this.speed
         }
+
+
         this.draw();
     }
 }
