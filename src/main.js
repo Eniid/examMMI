@@ -8,9 +8,14 @@ const animation = {
         document.body.classList.remove("no-js"); 
 
         const boutton = document.getElementById("to-step-2"); 
-        boutton.addEventListener('click', () => {
-            this.canvasElt = document.createElement("canvas"); 
+        this.canvasElt = document.createElement("canvas");
+        this.canvasElt.height = 480;
+        this.canvasElt.width = 640; 
 
+        this.ctx = this.canvasElt.getContext('2d'); 
+        boutton.addEventListener('click', () => {
+            console.log("coucou");
+            document.body.insertAdjacentElement("beforeend", this.canvasElt);
         })
 
         // Inisitaliser les classes
@@ -25,7 +30,7 @@ const animation = {
     }, 
 
     animate(){
-        his.ctx.clearRect(0, 0, this.canvasElt.width, this.canvasElt.height);
+        this.ctx.clearRect(0, 0, this.canvasElt.width, this.canvasElt.height);
         this.draw()
         window.requestAnimationFrame( ()=> {
             this.animate(); 
