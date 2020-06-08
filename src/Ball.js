@@ -7,7 +7,7 @@ export default class Ball {
         this.canvas = animation.canvasElt;  
 
         // Props de la ball
-        this.color = "#fff";
+        this.color = "red";
         this.widht = 10;
         this.height = 10;
         //this.acceleration = 0.2;
