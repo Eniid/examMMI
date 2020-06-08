@@ -12,7 +12,6 @@ export default class Ball {
         this.color = "red";
         this.widht = 10;
         this.height = 10;
-        //this.acceleration = 0.2;
         this.speed = 4;
         this.angle = Math.random() * 70 - 30; 
 
@@ -62,6 +61,7 @@ export default class Ball {
                 this.location.x = this.canvas.width/2 - this.widht/2; 
                 this.location.y = (this.canvas.height/2)-(this.height/2);
                 // AJouter un point à l'équipe adversse
+                this.animation.pallet2.point ++ 
             } else {
                 this.angle = this.angle - 90; 
             }
@@ -72,6 +72,7 @@ export default class Ball {
                 this.location.x = this.canvas.width/2 - this.widht/2; 
                 this.location.y = (this.canvas.height/2)-(this.height/2);
                 // AJouter un point à l'équipe adversse
+                this.animation.pallet.point ++ 
             } else {
                 this.angle = this.angle - 90; 
             }

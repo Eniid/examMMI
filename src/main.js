@@ -35,7 +35,7 @@ const animation = {
 
         this.pallet2 = new Pallet(this)
         this.pallet2.location.x = this.canvasElt.width - 40; // Valleur à changer pour qu'elle soit relative à des truc
-        
+        this.pallet2.locationPoint = 40; 
 
         // initialiser le contrôleur 
         this.controller.init(this);
