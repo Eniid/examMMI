@@ -11,10 +11,8 @@ export default class Ball {
         this.widht = 10;
         this.height = 10;
         //this.acceleration = 0.2;
-        this.speed = 4;
-        //this.dy = Math.random() * 2 + -1;
-        //this.dx = 1;
-        //this.direction = new Vector(this.dx, this.dy );
+        this.speed = 1;
+        this.angle = Math.random; 
 
         const x = this.canvas.width/2 - this.widht/2; 
         const y = (this.canvas.height/2)-(this.height/2); 
@@ -30,6 +28,12 @@ export default class Ball {
     }
 
     update(){
+        const x = this.speed * Math.cos(this.angle * (Math.PI/180)); 
+        const y = this.speed * Math.sin(this.angle * (Math.PI/180)); 
+        const newCoo = new Vector(x, y); 
+        this.location.add(newCoo); 
+
+        
         this.draw(); 
     }
 
