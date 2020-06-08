@@ -15,6 +15,7 @@ export default class Ball {
         //this.acceleration = 0.2;
         this.speed = 4;
         this.angle = Math.random() * 70 - 30; 
+        this.angle =  340; 
 
         const x = this.canvas.width/2 - this.widht/2; 
         const y = (this.canvas.height/2)-(this.height/2); 
@@ -46,6 +47,22 @@ export default class Ball {
                 this.angle = this.angle - 180; 
                 
             }
+        }
+
+        // Bords 
+        if(this.location.y < 10){
+            this.angle = this.angle - 90; 
+        }
+        if(this.location.y > this.canvas.height - 10){
+            this.angle = this.angle - 90; 
+        }
+        if(this.location.x > this.canvas.width ){
+            //console.log("partit");
+            if(this.location.y > this.canvas.height/2){
+                console.log("test");
+                
+            }
+            
         }
     }
 
