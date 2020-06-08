@@ -6,7 +6,7 @@ export default class Border {
 
         this.color = "#fff"; 
         this.a = this.canvas.height/3;
-        this.b = 0
+        this.b = 10;
         this.c = this.canvas.width; 
 
         // Propriétées des bordures 
@@ -17,10 +17,11 @@ export default class Border {
     draw(){
         this.ctx.beginPath(); 
         this.ctx.strokeStyle = this.color
-        ctx.moveTo(b, a);
-        ctx.lineTo(a, a);
-        ctx.lineTo(c, a);
-        ctx.lineTo(c, b);
+        this.ctx.moveTo(this.b, this.a);
+        this.ctx.lineTo(this.a, this.a);
+        this.ctx.lineTo(this.c, this.a);
+        this.ctx.lineTo(this.c, this.b);
+        this.ctx.stroke; 
 
     }
 

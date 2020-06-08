@@ -1,3 +1,7 @@
+import Border from "./Border";
+
+
+
 const animation = {
     canvasElt : undefined, 
     ctx:  undefined, 
@@ -19,6 +23,7 @@ const animation = {
         })
 
         // Inisitaliser les classes
+        this.border = new Border(this); 
 
         // initialiser le contrôleur 
 
@@ -26,7 +31,7 @@ const animation = {
     }, 
 
     draw(){
-
+        this.border.update(); 
     }, 
 
     animate(){
