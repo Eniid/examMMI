@@ -3,7 +3,8 @@ export default class Border {
         this.animation = animation;
         this.canvas = this.animation.canvasElt;
         this.ctx = this.animation.ctx
-
+        
+        // Propriétées des bordures 
         this.color = "#fff"; 
         this.width = 10; 
         this.a = this.canvas.height/3;
@@ -12,11 +13,6 @@ export default class Border {
         this.bTow = this.canvas.height; 
         this.c = this.canvas.width; 
         this.cTow = 0; 
-
-
-        // Propriétées des bordures 
-
-
     }
 
     draw(){
@@ -49,8 +45,6 @@ export default class Border {
 
     update(){
         this.draw(); 
-        
-        
     }
 
 }

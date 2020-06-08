@@ -13,8 +13,7 @@ export default class Ball {
         this.widht = 10;
         this.height = 10;
         this.speed = 4;
-        this.angle = Math.random() * 70 - 30; 
-
+        this.angle = Math.random() * 70 - 30; //! A inverser (une fois sur deux ? Rendom? )
 
         const x = this.canvas.width/2 - this.widht/2; 
         const y = (this.canvas.height/2)-(this.height/2); 
@@ -30,25 +29,21 @@ export default class Ball {
     }
 
     collision(){
-        //Pallets
+        //* Pallets
         if(this.location.x + this.widht > this.animation.pallet2.location.x) {
-            
             if(this.location.y > this.animation.pallet2.location.y && this.location.y < this.animation.pallet2.location.y + this.animation.pallet2.height) {
-                console.log("ça touche");
                 this.angle = this.angle - Math.random() * 40 - 160; 
             }
         }
 
         if(this.location.x < this.animation.pallet.location.x + this.animation.pallet.widht) {
-            
-            console.log("ça touche");
             if(this.location.y > this.animation.pallet.location.y && this.location.y < this.animation.pallet.location.y + this.animation.pallet.height) {
                 this.angle = this.angle - 180; 
                 
             }
         }
 
-        // Bords 
+        //* Bords 
         if(this.location.y < 10){
             this.angle = this.angle - 90; 
         }
@@ -56,7 +51,6 @@ export default class Ball {
             this.angle = this.angle - 90; 
         }
         if(this.location.x > this.canvas.width ){
-            //console.log("partit");
             if(this.location.y > this.canvas.height/3 && this.location.y < this.canvas.height/3 + this.canvas.height/3){
                 this.location.x = this.canvas.width/2 - this.widht/2; 
                 this.location.y = Math.random() * this.canvas.width/2 - 40 + 80;
@@ -67,7 +61,6 @@ export default class Ball {
             }
         }
         if(this.location.x < 0 ){
-            //console.log("partit");
             if(this.location.y > this.canvas.height/3 && this.location.y < this.canvas.height/3 + this.canvas.height/3){
                 this.location.x = this.canvas.width/2 - this.widht/2; 
                 this.location.y = Math.random() * this.canvas.width/2 - 40 + 80;
@@ -85,7 +78,6 @@ export default class Ball {
         const newCoo = new Vector(x, y); 
         this.location.add(newCoo); 
         
- 
         
         this.collision(); 
         this.draw(); 

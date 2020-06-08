@@ -48,8 +48,6 @@ const animation = {
         this.ball.update(); 
         this.pallet.update();
         this.pallet2.update(); 
-
-        
     }, 
 
     animate(){
@@ -60,8 +58,6 @@ const animation = {
         });
         //console.log(this.controller.pressedKeys);
     }, 
-
-
 }
 
 animation.init() 

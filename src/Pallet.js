@@ -9,12 +9,13 @@ export default class Pallet {
         this.controller = this.animation.controller; 
 
         this.color = "#fff";
-        this.colorPoint = "#fffa";
-        this.widht = 10;
+        this.widht = 10;Ò
         this.height = 100;
         this.speed = 3; 
-        this.point = 0; 
         this.locationPoint = this.canvas.width -40; 
+        
+        this.colorPoint = "#fffa";
+        this.point = 0; 
 
         const x = 20; 
         const y = (this.canvas.height/2)-(this.height/2); 
@@ -37,16 +38,13 @@ export default class Pallet {
 
 
 
-
     update(){
         if(this.controller.isKeyDown("p")){
             if(this.location.y > 0) this.location.y = this.location.y - this.speed
-            
         }
         if(this.controller.isKeyDown("l")){
             if(this.location.y < this.canvas.height - this.height) this.location.y = this.location.y + this.speed
         }
-
 
         this.draw();
     }

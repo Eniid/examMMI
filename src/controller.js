@@ -7,7 +7,6 @@ export const controller = {
 
 
             //const levelInput = document.getElementById("difficulty"); 
-
             //this.levelInput.addEventListener('chang', e =>{
                 //console.log(this.levelInput.value);
                 //! Récupérer la value pour après l'aplliqué a la speed de la balle et à la width du palet, mais ça fonctionne pas comme ça et j'avoue que je sais pas pourquoi, j'avais fait ça pour les shoots dans l'astéroide et ça fonctionnait parfaitement (avec un range ) :( 
