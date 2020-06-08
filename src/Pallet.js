@@ -1,11 +1,12 @@
 import Vector from './Vector';
 
-export default class Blocr {
+export default class Pallet {
     constructor(animation) {
         this.animation = animation;
         this.canvas = this.animation.canvasElt;
         this.ctx = this.animation.ctx;
-        this.bal = this.animation.bal;
+        this.ball = this.animation.ball;
+        this.controller = this.animation.controller; 
 
         this.color = "#fff";
         this.widht = 10;
@@ -25,17 +26,19 @@ export default class Blocr {
         this.ctx.fillStyle = this.color
         this.ctx.fillRect(this.location.x, this.location.y, this.widht, this.height);
         this.ctx.fill();
-
-        this.ctx.font = '48px serif';
-        this.ctx.textAlign = "center"; 
-        this.ctx.fillText(this.point, this.canvas.width - 20, this.canvas.height -20)
     }; 
 
 
 
 
     update(){
-        
+        if(this.controller.isKeyDown("p")){
+            this.location.y = this.location.y - this.speed
+            
+        }
+        if(this.controller.isKeyDown("l")){
+            this.location.y = this.location.y + this.speed
+        }
         this.draw();
     }
 }
