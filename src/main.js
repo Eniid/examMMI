@@ -2,6 +2,7 @@ import Border from "./Border";
 import Ball from "./Ball";
 import Pallet from "./Pallet";
 import { controller } from "./controller";
+import { settings } from "./settings";
 
 
 
@@ -9,7 +10,7 @@ const animation = {
     canvasElt : undefined, 
     ctx:  undefined, 
     controller, 
-
+    settings,
 
 
     init(){
@@ -18,13 +19,12 @@ const animation = {
 
         const boutton = document.getElementById("to-step-2"); 
         this.canvasElt = document.createElement("canvas");
-        this.canvasElt.height = 480;
-        this.canvasElt.width = 640; 
+        this.canvasElt.height = this.settings.canvasH;
+        this.canvasElt.width = this.settings.canvasW; 
 
         this.ctx = this.canvasElt.getContext('2d'); 
-        document.body.insertAdjacentElement("beforeend", this.canvasElt);
         boutton.addEventListener('click', () => {
-            console.log("coucou");
+            document.body.insertAdjacentElement("beforeend", this.canvasElt);
             
         })
 
@@ -34,8 +34,8 @@ const animation = {
         this.pallet = new Pallet(this); 
 
         this.pallet2 = new Pallet(this)
-        this.pallet2.location.x = this.canvasElt.width - 40; // Valleur à changer pour qu'elle soit relative à des truc
-        this.pallet2.locationPoint = 40; 
+        this.pallet2.location.x = this.canvasElt.width - this.settings.palletDiff; // Valleur à changer pour qu'elle soit relative à des truc
+        this.pallet2.locationPoint = this.settings.palletDiff; 
 
         // initialiser le contrôleur 
         this.controller.init(this);

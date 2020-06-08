@@ -59,7 +59,7 @@ export default class Ball {
             //console.log("partit");
             if(this.location.y > this.canvas.height/3 && this.location.y < this.canvas.height/3 + this.canvas.height/3){
                 this.location.x = this.canvas.width/2 - this.widht/2; 
-                this.location.y = (this.canvas.height/2)-(this.height/2);
+                this.location.y = Math.random() * this.canvas.width/2 - 40 + 80;
                 // AJouter un point à l'équipe adversse
                 this.animation.pallet2.point ++ 
             } else {
@@ -70,7 +70,7 @@ export default class Ball {
             //console.log("partit");
             if(this.location.y > this.canvas.height/3 && this.location.y < this.canvas.height/3 + this.canvas.height/3){
                 this.location.x = this.canvas.width/2 - this.widht/2; 
-                this.location.y = (this.canvas.height/2)-(this.height/2);
+                this.location.y = Math.random() * this.canvas.width/2 - 40 + 80;
                 // AJouter un point à l'équipe adversse
                 this.animation.pallet.point ++ 
             } else {
