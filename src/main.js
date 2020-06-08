@@ -1,10 +1,13 @@
 import Border from "./Border";
+import Ball from "./Ball";
+import Pallet from "./Pallet";
 
 
 
 const animation = {
     canvasElt : undefined, 
     ctx:  undefined, 
+
 
 
     init(){
@@ -24,6 +27,9 @@ const animation = {
 
         // Inisitaliser les classes
         this.border = new Border(this); 
+        this.ball = new Ball(this); 
+        this.pallet = new Pallet(this); 
+        this.pallet2 = new Pallet(this)
 
         // initialiser le contrôleur 
 
@@ -32,6 +38,10 @@ const animation = {
 
     draw(){
         this.border.update(); 
+        this.ball.update(); 
+        this.pallet.update();
+        this.pallet.location.x = 200; 
+        
     }, 
 
     animate(){

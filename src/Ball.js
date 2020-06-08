@@ -18,7 +18,7 @@ export default class Ball {
 
         const x = this.canvas.width/2 - this.widht/2; 
         const y = (this.canvas.height/2)-(this.height/2); 
-        this.location = new Vector(x, y)
+        this.location = new Vector(x, y); 
 
     }
 
